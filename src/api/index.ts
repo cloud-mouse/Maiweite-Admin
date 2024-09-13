@@ -50,24 +50,29 @@ class RequestHttp {
       // axiosCanceler.removePending(config);
       // * 登陆失效（code == 401
       if (data.code == ResultEnum.OVERDUE) {
-        ElMessageBox.confirm(`您已经登出，您可以取消留在此页面，或者重新登录!`, '登录失效', {
-          confirmButtonText: '重新登录',
-          cancelButtonText: '取消',
-          type: 'warning',
-        })
-          .then(async () => {
-            await userStore.logout()
-            // 跳转登录页
-            router.push({
-              path: '/login',
-              query: {
-                redirect: router.currentRoute.value.path !== '/login' ? router.currentRoute.value.fullPath : undefined,
-              },
-            })
-            window.location.reload()
+        if (config.headers!.needRefreshToken) {
+          return this.refreshToken(config)
+        }
+        else {
+          ElMessageBox.confirm(`您已经登出，您可以取消留在此页面，或者重新登录!`, '登录失效', {
+            confirmButtonText: '重新登录',
+            cancelButtonText: '取消',
+            type: 'warning',
           })
-          .catch(() => {})
-        return Promise.reject(data)
+            .then(async () => {
+              await userStore.logout()
+              // 跳转登录页
+              router.push({
+                path: '/login',
+                query: {
+                  redirect: router.currentRoute.value.path !== '/login' ? router.currentRoute.value.fullPath : undefined,
+                },
+              })
+              window.location.reload()
+            })
+            .catch(() => {})
+          return Promise.reject(data)
+        }
       }
       // * 全局错误信息拦截（防止下载文件得时候返回数据流，没有code，直接报错）
       if (data.code && data.code !== ResultEnum.SUCCESS) {
@@ -94,6 +99,16 @@ class RequestHttp {
       }
       return Promise.reject(error)
     })
+  }
+
+  // token 过期的话，刷新token  看接口是否需要
+  async refreshToken(config) {
+    const userStore = useUserStore()
+    const { code } = await userStore.refreshToken()
+    if (code) {
+      const res = this.service.request(config)
+      return res
+    }
   }
 
   // * 常用请求方法封装

@@ -57,6 +57,18 @@ const useUserStore = defineStore('user', () => {
       },
     })
   }
+  // 登录过期 刷新
+  async function refreshToken() {
+    console.log('刷新token')
+    // ... 这边就是通过拿刷新token,调用接口获取新的token
+    // 成功之后重新设置一下token
+    setLocal('token', 'adgsjhgajsdhgahjsdghjasgdhjasgjdhgajsd')
+    return {
+      code: 1,
+      data: 'adgsjhgajsdhgahjsdghjasgdhjasgjdhgajsd',
+      message: 'token刷新成功',
+    }
+  }
 
   // 获取权限
   async function getPermissions() {
@@ -73,6 +85,7 @@ const useUserStore = defineStore('user', () => {
     login,
     logout,
     getPermissions,
+    refreshToken,
   }
 })
 export default useUserStore
