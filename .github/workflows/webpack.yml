@@ -18,6 +18,7 @@ jobs:
 
       - name: 安装依赖和打包
         run: |
+          npm i -g pnpm
           pnpm install
           pnpm run build:test
 
