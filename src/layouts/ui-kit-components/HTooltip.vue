@@ -15,7 +15,7 @@
 <script setup lang="ts">
 withDefaults(
   defineProps<{
-    text: string
+    text: string | undefined
     enable?: boolean
   }>(),
   {
