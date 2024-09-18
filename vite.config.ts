@@ -35,6 +35,7 @@ export default async ({ mode, command }) => {
       // 消除打包大小超过500kb警告
       chunkSizeWarningLimit: 4000,
       rollupOptions: {
+        preserveModules: true, // 保留模块的导入导出，否则打包后无法使用import语法
         // 静态资源分类打包
         output: {
           chunkFileNames: 'assets/js/[name]-[hash].js',
