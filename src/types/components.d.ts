@@ -7,6 +7,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    Auth: typeof import('./../components/Auth/index.vue')['default']
     ColSetting: typeof import('./../components/ProTable/components/ColSetting.vue')['default']
     Grid: typeof import('./../components/Grid/index.vue')['default']
     GridItem: typeof import('./../components/Grid/components/GridItem.vue')['default']
