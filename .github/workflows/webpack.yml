@@ -16,11 +16,11 @@ jobs:
       - name: 读取仓库信息
         uses: actions/checkout@v4
 
-      - name: 安装依赖和打包
-        run: |
-          npm i -g pnpm
-          pnpm install
-          pnpm run build:test
+      # - name: 安装依赖和打包
+      #   run: |
+      #     npm i -g pnpm
+      #     pnpm install
+      #     pnpm run build:test
 
       - name: 部署
         uses: JamesIves/github-pages-deploy-action@v4
