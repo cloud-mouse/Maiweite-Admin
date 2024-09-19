@@ -48,6 +48,7 @@ class RequestHttp {
       const userStore = useUserStore()
       // * 在请求结束后，移除本次请求，并关闭请求 loading
       // axiosCanceler.removePending(config);
+      tryHideFullScreenLoading()
       // * 登陆失效（code == 401
       if (data.code == ResultEnum.OVERDUE) {
         if (config.headers!.needRefreshToken) {

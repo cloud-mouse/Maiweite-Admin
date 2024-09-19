@@ -1,4 +1,4 @@
-import type { ReqUserListParams, ResUserList } from '../interface/sys_user'
+import type { ReqUserListParams, ResUserList } from '../interface/modules/sys_user'
 import type { ResPage, ResultData } from '@/api/interface'
 import { PORT1 } from '@/api/config/servicePort'
 

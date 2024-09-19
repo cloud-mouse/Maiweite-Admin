@@ -39,8 +39,8 @@
 
 <script lang="tsx" setup>
 import { CirclePlus, Delete, EditPen } from '@element-plus/icons-vue'
-import { addUserApi, delSysUserApi, editUserApi, getSysUserListApi } from '../http/user'
 import UserDrawer from './modules/userDrawer.vue'
+import { addUserApi, delSysUserApi, editUserApi, getSysUserListApi } from '@/api/modules/user'
 import type { ColumnProps, ProTableInstance } from '@/components/ProTable/interface'
 
 defineOptions({

@@ -12,6 +12,7 @@ import createComponents from './components'
 import createSvgIcon from './svg-icon'
 import createCompression from './compression'
 import createVisualizer from './visualizer'
+import mock from './mock'
 
 export default function createVitePlugins(viteEnv, isBuild = false) {
   const vitePlugins: (PluginOption | PluginOption[])[] = [
@@ -34,5 +35,6 @@ export default function createVitePlugins(viteEnv, isBuild = false) {
   vitePlugins.push(createLayouts())
   vitePlugins.push(...createCompression(viteEnv, isBuild))
   vitePlugins.push(createVisualizer() as any)
+  vitePlugins.push(mock(viteEnv, isBuild))
   return vitePlugins
 }

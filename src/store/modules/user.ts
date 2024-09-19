@@ -4,6 +4,7 @@ import useRouteStore from './route'
 import router from '@/router'
 import { getLocal, removeLocal, setLocal } from '@/utils/storage'
 import type { ReqLoginForm } from '@/api/interface/modules/login'
+import { loginApi } from '@/api/modules/login'
 
 const useUserStore = defineStore('user', () => {
   const settingsStore = useSettingsStore()
@@ -24,20 +25,20 @@ const useUserStore = defineStore('user', () => {
   // 登录
   async function login(data: ReqLoginForm) {
     console.log('登录逻辑处理', data)
-    // const res = await loginApi(data)
-    // setLocal('account', res.data.account)
-    // setLocal('token', res.data.token)
-    // setLocal('avatar', res.data.avatar)
-    // account.value = res.data.account
-    // token.value = res.data.token
-    // avatar.value = res.data.avatar
+    const res = await loginApi(data)
+    setLocal('account', res.data.account)
+    setLocal('token', res.data.token)
+    setLocal('avatar', res.data.avatar)
+    account.value = res.data.account
+    token.value = res.data.token
+    avatar.value = res.data.avatar
     // 模拟登录成功
-    setLocal('account', data.account)
-    setLocal('token', 'adgsjhgajsdhgahjsdghjasgdhjasgjdhgajsd')
-    setLocal('avatar', '')
-    account.value = data.account
-    token.value = 'adgsjhgajsdhgahjsdghjasgdhjasgjdhgajsd'
-    avatar.value = ''
+    // setLocal('account', data.account)
+    // setLocal('token', 'adgsjhgajsdhgahjsdghjasgdhjasgjdhgajsd')
+    // setLocal('avatar', '')
+    // account.value = data.account
+    // token.value = 'adgsjhgajsdhgahjsdghjasgdhjasgjdhgajsd'
+    // avatar.value = ''
   }
   // 登出
   async function logout(redirect = router.currentRoute.value.fullPath) {

@@ -28,6 +28,8 @@ export function createProxy(list: ProxyList = [], VITE_OPEN_PROXY: string) {
       ...(isHttps ? { secure: false } : {}),
     }
   }
-  console.log('ret', ret)
+  if (VITE_OPEN_PROXY === 'true') {
+    console.log('ret', ret)
+  }
   return ret
 }
