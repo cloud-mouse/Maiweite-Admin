@@ -1,1 +1,0 @@
-import{_ as e}from"./_plugin-vue_export-helper-DlAUqK2U.js";import{o as t,c}from"./@vue-CZYi67Zs.js";const o={};function r(n,s){return t(),c("div",null," 系统设置 ")}const f=e(o,[["render",r]]);export{f as default};
