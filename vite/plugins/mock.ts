@@ -5,6 +5,6 @@ export default function createMock(env, isBuild) {
   return viteMockServe({
     logger: !isBuild,
     mockPath: 'src/mock',
-    enable: !isBuild && VITE_BUILD_MOCK === 'true',
+    enable: VITE_BUILD_MOCK === 'true',
   })
 }
