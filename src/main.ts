@@ -25,7 +25,13 @@ import 'virtual:uno.css'
 import '@/assets/styles/globals.scss'
 // element-plus样式覆盖
 import '@/assets/styles/element.scss'
+import { setupProdMockServer } from '@/mock/mockProdServer'
+// vite 生产环境判断
 
+const isProd = import.meta.env.VITE_NODE_ENV !== 'development'
+if (isProd) {
+  setupProdMockServer() // 生产环境开启mock
+}
 async function setupApp() {
   const app = createApp(App)
   // 注册Element UI
