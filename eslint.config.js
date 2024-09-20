@@ -37,6 +37,7 @@ export default antfu(
       'vue/block-order': ['error', {
         order: ['route', 'template', 'script', 'style'],
       }],
+      'style/no-tabs': 'off',
     },
   },
   {

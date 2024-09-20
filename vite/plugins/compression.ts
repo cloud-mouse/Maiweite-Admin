@@ -8,13 +8,16 @@ export default function createCompression(env, isBuild) {
     const compressList = VITE_BUILD_COMPRESS.split(',')
     if (compressList.includes('gzip')) {
       plugin.push(
-        compression(),
+        compression({
+          exclude: [/\.(html)$/],
+          algorithm: 'gzip',
+        }),
       )
     }
     if (compressList.includes('brotli')) {
       plugin.push(
         compression({
-          exclude: [/\.(br)$/, /\.(gz)$/],
+          exclude: [/\.(br)$/, /\.(gz)$/, /\.(html)$/],
           algorithm: 'brotliCompress',
         }),
       )

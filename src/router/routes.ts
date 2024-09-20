@@ -36,7 +36,7 @@ const systemRoutes: RouteRecordRaw[] = [
     children: [
       {
         path: 'dashboard',
-        component: () => import('@/views/welcome/index.vue'),
+        component: () => import('@/views/home/index.vue'),
         name: 'Dashboard',
         meta: {
           title: () => useSettingsStore().settings.home.title,

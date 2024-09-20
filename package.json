@@ -63,6 +63,8 @@
     "autoprefixer": "^9.0.0",
     "crypto-js": "^4.2.0",
     "cz-git": "^1.9.4",
+    "dayjs": "^1.11.13",
+    "echarts": "^5.5.1",
     "eslint": "^9.9.1",
     "lint-staged": "^15.2.10",
     "lodash-es": "^4.17.21",
