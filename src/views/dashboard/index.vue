@@ -290,21 +290,21 @@ const panelData: any = ref({
 // 柱状图数据
 const barChartData = ref([])
 const getBarData = () => {
-  getBarChartData().then((res: any) => {
+  getBarChartData({}).then((res: any) => {
     barChartData.value = res.data.records || []
   })
 }
 // 折线图数据
 const lineChartData = ref([])
 const getLineData = () => {
-  getLineChartData().then((res: any) => {
+  getLineChartData({}).then((res: any) => {
     lineChartData.value = res.data.records || []
   })
 }
 // 用户计划达标率
 const userPlanList: any = ref([])
 const getUserPlanList = () => {
-  getUserSort().then((res) => {
+  getUserSort({}).then((res) => {
     userPlanList.value = res.data.records || []
   })
 }
