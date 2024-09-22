@@ -50,7 +50,7 @@ export default defineComponent({
             },
             formatter(params: any) {
               return `<span> ${params[0].data.date} </span><br/>
-                <span> 新增患者：<span >${params[0].data.count}</span>人</span>`
+                <span> 新增用户：<span >${params[0].data.count}</span>人</span>`
             },
             padding: 8,
           },

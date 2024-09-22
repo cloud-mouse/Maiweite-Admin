@@ -38,6 +38,7 @@ export default antfu(
         order: ['route', 'template', 'script', 'style'],
       }],
       'style/no-tabs': 'off',
+      'antfu/top-level-function': 'off',
     },
   },
   {

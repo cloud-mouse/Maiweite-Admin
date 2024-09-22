@@ -7,8 +7,6 @@ export default [
     url: '/mock/user/login',
     method: 'post',
     response: ({ body }) => {
-      console.log(body)
-
       return {
         error: '',
         code: 200,

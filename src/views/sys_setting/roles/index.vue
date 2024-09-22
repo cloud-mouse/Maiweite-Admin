@@ -1,5 +1,5 @@
 <template>
   <div>
-    权限测试
+    角色设置
   </div>
 </template>

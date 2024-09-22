@@ -1,6 +1,6 @@
 <template>
   <div
-    ref="itemRef" class="menu-item relative transition-all" :class="{
+    ref="itemRef" class="11 menu-item relative transition-all" :class="{
       active: isItemActive,
     }"
   >

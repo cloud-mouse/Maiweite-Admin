@@ -24,9 +24,17 @@ const routes: RouteRecordRaw = {
     }, {
       path: 'sys_role',
       name: 'SysRole',
-      component: () => import('@/views/sys_setting/test1.vue'),
+      component: () => import('@/views/sys_setting/roles/index.vue'),
       meta: {
         title: '角色管理',
+      },
+    },
+    {
+      path: 'index',
+      name: 'Permission',
+      component: () => import('@/views/sys_setting/permission/index.vue'),
+      meta: {
+        title: '权限管理',
       },
     },
   ],

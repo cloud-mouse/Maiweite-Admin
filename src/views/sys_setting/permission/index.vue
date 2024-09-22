@@ -1,5 +1,5 @@
 <template>
   <div>
-    权限首页
+    权限设置
   </div>
 </template>

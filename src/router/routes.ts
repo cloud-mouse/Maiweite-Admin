@@ -1,5 +1,5 @@
 import type { RouteRecordRaw } from 'vue-router'
-import PermissionDemo from './modules/permission_demo'
+import Normal from './modules/normal'
 import System from './modules/system_demo'
 import useSettingsStore from '@/store/modules/settings'
 import type { Route } from '@/types/global'
@@ -35,16 +35,6 @@ const systemRoutes: RouteRecordRaw[] = [
     },
     children: [
       {
-        path: 'dashboard',
-        component: () => import('@/views/home/index.vue'),
-        name: 'Dashboard',
-        meta: {
-          title: () => useSettingsStore().settings.home.title,
-          icon: 'ant-design:home-twotone',
-          breadcrumb: false,
-        },
-      },
-      {
         path: 'reload',
         name: 'reload',
         component: () => import('@/views/reload.vue'),
@@ -61,16 +51,16 @@ const systemRoutes: RouteRecordRaw[] = [
 const asyncRoutes: Route.recordMainRaw[] = [
   {
     meta: {
-      title: '权限管理',
+      title: '基础功能',
       icon: 'ep:set-up',
     },
     children: [
-      PermissionDemo,
+      Normal,
     ],
   },
   {
     meta: {
-      title: '配置',
+      title: '系统配置',
       icon: 'ep:setting',
     },
     children: [
