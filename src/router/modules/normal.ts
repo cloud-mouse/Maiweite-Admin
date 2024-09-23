@@ -5,9 +5,9 @@ function Layout() {
 }
 
 const routes: Array<RouteRecordRaw> = [{
-  path: '/',
+  path: '/home',
   component: Layout,
-  redirect: '/dashboard',
+  redirect: '/home/dashboard',
   name: 'Home',
   meta: {
     // title: () => useSettingsStore().settings.home.title,
@@ -21,7 +21,7 @@ const routes: Array<RouteRecordRaw> = [{
       name: 'Dashboard',
       meta: {
         menu: false,
-        activeMenu: '',
+        activeMenu: '/home',
       },
     },
   ],

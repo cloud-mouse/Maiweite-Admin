@@ -9,13 +9,13 @@ const globalSettingsDefault: RecursiveRequired<Settings.all> = {
     enableDynamicTitle: false,
     lightTheme: 'string',
     translationLang: getLocal('lang') || 'zh',
-    themeColor: getLocal('themeColor') || '#80BEAF',
+    themeColor: getLocal('themeColor') || '#8B5CF6',
     routeBaseOn: 'frontend', // 'frontend'：前端 'backend' 后端
   },
   home: {
     enable: true,
     title: '控制台',
-    fullPath: '/dashboard',
+    fullPath: '/home/dashboard',
   },
   layout: {
     enableMobileAdaptation: false,
