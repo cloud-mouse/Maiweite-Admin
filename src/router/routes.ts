@@ -55,7 +55,7 @@ const asyncRoutes: Route.recordMainRaw[] = [
       icon: 'ep:set-up',
     },
     children: [
-      Normal,
+      ...Normal,
     ],
   },
   {

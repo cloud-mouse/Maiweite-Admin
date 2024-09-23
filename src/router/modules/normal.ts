@@ -4,7 +4,7 @@ function Layout() {
   return import('@/layouts/index.vue')
 }
 
-const routes: RouteRecordRaw = {
+const routes: Array<RouteRecordRaw> = [{
   path: '/',
   component: Layout,
   redirect: '/dashboard',
@@ -25,6 +25,33 @@ const routes: RouteRecordRaw = {
       },
     },
   ],
-}
+}, {
+  path: '/base_comp',
+  component: Layout,
+  name: 'BaseComp',
+  meta: {
+    // title: () => useSettingsStore().settings.home.title,
+    title: '组件',
+    icon: 'ant-design:code-sandbox-outlined',
+  },
+  children: [
+    {
+      path: 'file_upload',
+      component: () => import('@/views/base_comp/file_upload/index.vue'),
+      name: 'FileUpload',
+      meta: {
+        title: '文件上传',
+      },
+    },
+    {
+      path: 'base_table',
+      component: () => import('@/views/base_comp/base_table/index.vue'),
+      name: 'BaseTable',
+      meta: {
+        title: '通用列表',
+      },
+    },
+  ],
+}]
 
 export default routes
