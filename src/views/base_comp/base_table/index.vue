@@ -6,5 +6,5 @@
 defineOptions({
   name: 'BaseTable',
 })
-console.log(base_table)
+console.log('base_table')
 </script>
