@@ -44,6 +44,14 @@ const routes: Array<RouteRecordRaw> = [{
       },
     },
     {
+      path: 'webworker',
+      component: () => import('@/views/base_comp/file_upload/webworker.vue'),
+      name: 'webWorker',
+      meta: {
+        title: '大文件上传',
+      },
+    },
+    {
       path: 'base_table',
       component: () => import('@/views/base_comp/base_table/index.vue'),
       name: 'BaseTable',
