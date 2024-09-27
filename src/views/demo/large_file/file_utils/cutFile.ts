@@ -11,9 +11,7 @@ export async function cutFile(file: File, chunkSize: number = CHUNK_SIZE) {
       const WORK_CHUNK_COUNT = Math.ceil(chunkCount / WORK_COUNT)
       let finishCount = 0
       for (let i = 0; i < WORK_COUNT; i++) {
-        const worker = new Worker(new URL('./webworker.js', import.meta.url), {
-          type: 'module',
-        })
+        const worker = new Worker(new URL('@/views/demo/large_file/file_utils/webworker.js', import.meta.url))
         const startIndex = i * WORK_CHUNK_COUNT
         let endIndex = startIndex + WORK_CHUNK_COUNT
         if (endIndex > chunkCount) {

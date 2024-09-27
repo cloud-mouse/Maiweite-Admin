@@ -24,7 +24,7 @@ export default antfu(
       'regexp/no-unused-capturing-group': 'off', // 禁止在正则表达式中使用未使用的捕获组
       'no-unused-vars': 'off',
       'array-callback-return': 'off',
-      'curly': ['error', 'all'],
+      'curly': 'off',
       'antfu/consistent-list-newline': 'off',
       'no-irregular-whitespace': 'off', // 禁止不规则的空白
       'no-console': 'off', // 是否允许在代码中使用 console

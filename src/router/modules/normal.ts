@@ -32,7 +32,7 @@ const routes: Array<RouteRecordRaw> = [{
   meta: {
     // title: () => useSettingsStore().settings.home.title,
     title: '组件',
-    icon: 'ant-design:code-sandbox-outlined',
+    icon: 'ant-design:export',
   },
   children: [
     {
@@ -43,17 +43,28 @@ const routes: Array<RouteRecordRaw> = [{
         title: '文件上传',
       },
     },
+  ],
+}, {
+  path: '/demo',
+  component: Layout,
+  name: 'Demo',
+  meta: {
+    // title: () => useSettingsStore().settings.home.title,
+    title: '示例功能',
+    icon: 'ant-design:code-sandbox-outlined',
+  },
+  children: [
     {
-      path: 'webworker',
-      component: () => import('@/views/base_comp/file_upload/webworker.vue'),
-      name: 'webWorker',
+      path: 'large_file',
+      component: () => import('@/views/demo/large_file/index.vue'),
+      name: 'LargeFile',
       meta: {
         title: '大文件上传',
       },
     },
     {
       path: 'base_table',
-      component: () => import('@/views/base_comp/base_table/index.vue'),
+      component: () => import('@/views/demo/base_table/index.vue'),
       name: 'BaseTable',
       meta: {
         title: '通用列表',
