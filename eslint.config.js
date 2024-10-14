@@ -39,6 +39,8 @@ export default antfu(
       }],
       'style/no-tabs': 'off',
       'antfu/top-level-function': 'off',
+      'ts/no-use-before-define': 'off',
+      'unused-imports/no-unused-vars': 'warn',
     },
   },
   {
