@@ -3,9 +3,12 @@
   "type": "module",
   "version": "0.0.1",
   "private": true,
+  "engines": {
+    "node": "^18.18.0 || >=20.0.0"
+  },
   "scripts": {
     "dev": "vite",
-    "build:test": "vue-tsc && vite build --mode test",
+    "build:test": "vite build --mode test",
     "build:prod": "vue-tsc && vite build --mode production",
     "report": "http-server ./dist -o stats.html",
     "deploy": "sh deploy.sh",
