@@ -1,13 +1,15 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import process from 'node:process'
+import dayjs from 'dayjs'
 import { defineConfig, loadEnv } from 'vite'
 import { createProxy } from './vite/proxy'
 import createVitePlugins from './vite/plugins'
 import { wrapperEnv } from './vite/utils'
-
+import pkg from './package.json'
 // https://vitejs.dev/config/
 export default async ({ mode, command }) => {
+  const nowTime = new Date().getTime() // 定义一个时间戳
   const env = loadEnv(mode, process.cwd())
   const viteEnv = wrapperEnv(env)
   const { VITE_PROXY, VITE_OPEN_PROXY } = viteEnv
@@ -51,6 +53,16 @@ export default async ({ mode, command }) => {
     esbuild: {
       // 清除全局的console.log和debug
       drop: isBuild ? ['console', 'debugger'] : [],
+    },
+    define: {
+      __SYSTEM_INFO__: JSON.stringify({
+        pkg: {
+          dependencies: pkg.dependencies,
+          devDependencies: pkg.devDependencies,
+        },
+        lastBuildTime: dayjs().format('YYYY-MM-DD HH:mm:ss'),
+      }),
+      __APP_VERSION__: nowTime,
     },
     plugins: createVitePlugins(env, isBuild),
     resolve: {

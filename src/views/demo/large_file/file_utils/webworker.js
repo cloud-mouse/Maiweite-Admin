@@ -1,5 +1,5 @@
 // import { creatChunk } from './createChunk.js'
-self.importScripts('spark-md5.js');
+self.importScripts('spark-md5.js')
 
 function createChunk(file, index, chunkSize) {
   try {
@@ -22,9 +22,9 @@ function createChunk(file, index, chunkSize) {
         reject(err) // 如果读取错误，则拒绝Promise
       }
     })
-  } catch (error) {
-    console.log(error);
-
+  }
+  catch (error) {
+    console.log(error)
   }
 }
 
@@ -38,8 +38,8 @@ self.onmessage = async (e) => {
     }
     const chunks = await Promise.all(promises)
     self.postMessage(chunks)
-  } catch (error) {
+  }
+  catch (error) {
     self.postMessage(error)
   }
-
 }

@@ -26,25 +26,6 @@ const routes: Array<RouteRecordRaw> = [{
     },
   ],
 }, {
-  path: '/base_comp',
-  component: Layout,
-  name: 'BaseComp',
-  meta: {
-    // title: () => useSettingsStore().settings.home.title,
-    title: '组件',
-    icon: 'ant-design:export',
-  },
-  children: [
-    {
-      path: 'file_upload',
-      component: () => import('@/views/base_comp/file_upload/index.vue'),
-      name: 'FileUpload',
-      meta: {
-        title: '文件上传',
-      },
-    },
-  ],
-}, {
   path: '/demo',
   component: Layout,
   name: 'Demo',
@@ -70,6 +51,86 @@ const routes: Array<RouteRecordRaw> = [{
         title: '通用列表',
       },
     },
+    {
+      path: 'form_design_demo',
+      component: () => import('@/views/form_design_demo/index.vue'),
+      name: 'FormDesignDemo',
+      meta: {
+        title: '表单设计',
+      },
+    },
+  ],
+}, {
+  path: '/components_demo',
+  component: Layout,
+  redirect: '/components_demo/icon/iconify',
+  name: 'ComponentDemo',
+  meta: {
+    title: '组件',
+    icon: 'ri:layout-right-line',
+  },
+  children: [
+    {
+      path: 'icon',
+      name: 'Icon',
+      redirect: '/components_demo/icon/iconify',
+      meta: {
+        title: '扩展图标',
+        icon: 'ri:remixicon-line',
+      },
+      children: [
+        {
+          path: 'iconify',
+          name: 'Iconify',
+          component: () => import('@/views/components_demo/svg_icon/iconify.vue'),
+          meta: {
+            title: 'Iconify',
+          },
+        },
+        {
+          path: 'svg_icon',
+          name: 'SvgIcon',
+          component: () => import('@/views/components_demo/svg_icon/svg_icon.vue'),
+          meta: {
+            title: 'SvgIcon',
+          },
+        },
+        {
+          path: 'icon_select',
+          name: 'IconSelect',
+          component: () => import('@/views/components_demo/svg_icon/icon_select.vue'),
+          meta: {
+            title: 'Icon图标选择器',
+          },
+        },
+      ],
+    },
+    {
+      path: 'table_select',
+      name: 'TableSelectDemo',
+      component: () => import('@/views/components_demo/table_select/index.vue'),
+      meta: {
+        title: '表格选择器',
+        icon: 'mdi:table-plus',
+      },
+    }, {
+      path: 'upload',
+      name: 'Upload',
+      component: () => import('@/views/components_demo/upload/index.vue'),
+      meta: {
+        title: '文件上传',
+        icon: 'mdi:folder-upload-outline',
+      },
+    }, {
+      path: 'time_line',
+      name: 'TimeLine',
+      component: () => import('@/views/components_demo/time_line/index.vue'),
+      meta: {
+        title: '时间线',
+        icon: 'ant-design:field-time-outlined',
+      },
+    },
+
   ],
 }]
 

@@ -7,6 +7,7 @@
 export {}
 declare global {
   const EffectScope: typeof import('vue')['EffectScope']
+  const SocketStatus: typeof import('../hooks/useWebSocket')['SocketStatus']
   const acceptHMRUpdate: typeof import('pinia')['acceptHMRUpdate']
   const computed: typeof import('vue')['computed']
   const createApp: typeof import('vue')['createApp']
@@ -80,11 +81,13 @@ declare global {
   const useRouter: typeof import('vue-router')['useRouter']
   const useSelection: typeof import('../hooks/useSelection')['useSelection']
   const useSlots: typeof import('vue')['useSlots']
+  const useSocket: typeof import('../hooks/useSocket')['default']
   const useTabbar: typeof import('../hooks/useTabbar')['default']
   const useTable: typeof import('../hooks/useTable')['useTable']
   const useTemplateRef: typeof import('vue')['useTemplateRef']
   const useVerify: typeof import('../hooks/useVerify')['useVerify']
   const useViewTransition: typeof import('../hooks/useViewTransition')['default']
+  const useWebSocket: typeof import('../hooks/useWebSocket')['default']
   const watch: typeof import('vue')['watch']
   const watchEffect: typeof import('vue')['watchEffect']
   const watchPostEffect: typeof import('vue')['watchPostEffect']
