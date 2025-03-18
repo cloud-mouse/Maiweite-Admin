@@ -3,8 +3,8 @@
     <title>日程</title>
     <defs>
         <linearGradient x1="0%" y1="17.905535%" x2="97.626361%" y2="17.905535%" id="linearGradient-1">
-            <stop stop-color="#2D68F4" offset="0%"></stop>
-            <stop stop-color="#268AFF" offset="100%"></stop>
+            <stop stop-color="var(--g-ui-primary-light-1)" offset="0%"></stop>
+            <stop stop-color="var(--g-ui-primary)" offset="100%"></stop>
         </linearGradient>
     </defs>
     <g id="日程" stroke="none" stroke-width="0" fill="none" fill-rule="evenodd">

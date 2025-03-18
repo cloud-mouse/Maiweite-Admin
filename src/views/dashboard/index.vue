@@ -163,7 +163,7 @@
         </div>
         <div class="mb-[15px] mt-[10px] flex items-center px-[15px] text-[14px] text-[#333] font-[400]">
           <div class="flex flex-1 items-center">
-            <el-icon class="text-[28px] !color-[var(--g-ui-primary)]">
+            <el-icon class="text-[28px]" color="var(--g-ui-primary)">
               <svg-icon name="workbench-server-user" />
             </el-icon>
             <span class="ml-[10px]">服务用户数</span>
@@ -174,7 +174,7 @@
         </div>
         <div class="flex items-center px-[15px] pb-[24px] text-[14px] text-[#333] font-[400]">
           <div class="flex items-center">
-            <el-icon class="text-[28px] !color-[var(--g-ui-primary)]">
+            <el-icon class="text-[28px]" color="var(--g-ui-primary)">
               <svg-icon name="workbench-schedule" />
             </el-icon>
             <span class="ml-[10px]">日程</span>
