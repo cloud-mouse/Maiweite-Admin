@@ -52,21 +52,21 @@ const activities = [
   },
   {
     content: '支持方形发光',
-    timestamp: lastBuildTime,
+    timestamp: '2024-12-18',
     icon: markRaw(useRenderFlicker({ borderRadius: 0, background: '#67C23A' })),
   },
   {
     content: '支持默认颜色',
-    timestamp: lastBuildTime,
+    timestamp: '2024-10-15',
   },
   {
     content: '支持自定义颜色',
-    timestamp: lastBuildTime,
+    timestamp: '2024-09-18',
     color: '#F56C6C',
   },
   {
     content: '支持自定义图标',
-    timestamp: lastBuildTime,
+    timestamp: '2024-09-10',
     color: '#F56C6C',
     icon: Clock,
   },

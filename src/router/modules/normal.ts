@@ -59,6 +59,14 @@ const routes: Array<RouteRecordRaw> = [{
         title: '表单设计',
       },
     },
+    {
+      path: 'app_design',
+      component: () => import('@/views/app_design/index.vue'),
+      name: 'AppDesign',
+      meta: {
+        title: '页面装修',
+      },
+    },
   ],
 }, {
   path: '/components_demo',
