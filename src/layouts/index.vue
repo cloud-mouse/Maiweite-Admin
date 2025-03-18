@@ -113,6 +113,7 @@ const enableAppSetting = import.meta.env.VITE_APP_SETTING === 'true'
   }
 
   .main-container {
+    padding: 16px;
     margin-left: 0 !important;
   }
 
@@ -194,6 +195,7 @@ const enableAppSetting = import.meta.env.VITE_APP_SETTING === 'true'
     display: flex;
     flex-direction: column;
     min-height: 100%;
+    padding: 16px;
     margin-left: calc(var(--g-main-sidebar-actual-width) + var(--g-sub-sidebar-actual-width));
     background-color: var(--g-bg);
     box-shadow: -1px 0 0 0 var(--g-border-color), 1px 0 0 0 var(--g-border-color);

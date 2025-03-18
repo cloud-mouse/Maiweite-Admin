@@ -71,7 +71,7 @@ export default defineComponent({
                 },
               },
               axisLabel: {
-                color: '#000',
+                color: 'var(--g-text-color)',
                 fontSize: 13,
               },
               axisTick: {

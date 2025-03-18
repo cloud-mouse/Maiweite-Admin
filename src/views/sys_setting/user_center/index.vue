@@ -1,5 +1,5 @@
 <template>
-  <div class="table-container">
+  <div class="table-container !p-0">
     <div class="table-box">
       <ProTable
         ref="proTableRef"

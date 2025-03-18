@@ -56,6 +56,9 @@ export default defineComponent({
             itemWidth: 12,
             itemHeight: 12,
             itemGap: 16,
+            textStyle: {
+              color: 'var(--g-text-color)',
+            },
             data: ['宣教', '表单', '消息提醒', '文本提醒'],
           },
           grid: {
@@ -73,7 +76,7 @@ export default defineComponent({
                 },
               },
               axisLabel: {
-                color: '#000',
+                color: 'var(--g-text-color)',
                 fontSize: 13,
               },
             },

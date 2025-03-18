@@ -1,10 +1,10 @@
 <template>
-  <div class="Workbench flex justify-between p-16px !w-full">
+  <div class="Workbench flex justify-between !w-full">
     <div class="Workbench-wrap-left">
-      <div class="mb-[10px] rounded-[8px] bg-[#fff] p-[20px] text-[16px] text-[#333] font-[550]">
+      <div class="mb-[10px] rounded-[8px] bg-[--g-container-bg] p-[20px] text-[16px] text-[--g-text-color] font-[550]">
         您好，管理员~
       </div>
-      <div class="mb-[10px] rounded-[8px] bg-[#fff]">
+      <div class="mb-[10px] rounded-[8px] bg-[--g-container-bg]">
         <div class="wrap-bock-title">
           系统看板
         </div>
@@ -51,7 +51,7 @@
           </div>
         </div>
       </div>
-      <div class="mb-[10px] rounded-[8px] bg-[#fff]">
+      <div class="mb-[10px] rounded-[8px] bg-[--g-container-bg]">
         <div class="wrap-bock-title">
           待处理
         </div>
@@ -102,7 +102,7 @@
           </div>
         </div>
       </div>
-      <div class="rounded-[8px] bg-[#fff]">
+      <div class="rounded-[8px] bg-[--g-container-bg]">
         <div class="wrap-bock-title">
           数据统计
         </div>
@@ -129,7 +129,7 @@
       </div>
     </div>
     <div class="Workbench-wrap-right">
-      <div class="mb-[10px] rounded-[8px] bg-[#fff]">
+      <div class="mb-[10px] rounded-[8px] bg-[--g-container-bg]">
         <div class="wrap-bock-title">
           我的日程
         </div>
@@ -161,7 +161,7 @@
             </template>
           </el-calendar>
         </div>
-        <div class="mb-[15px] mt-[10px] flex items-center px-[15px] text-[14px] text-[#333] font-[400]">
+        <div class="mb-[15px] mt-[10px] flex items-center px-[15px] text-[14px] text-[--g-text-color] font-[400]">
           <div class="flex flex-1 items-center">
             <el-icon class="text-[28px]" color="var(--g-ui-primary)">
               <svg-icon name="workbench-server-user" />
@@ -172,7 +172,7 @@
             {{ calendarDayData.serviceUserNumber || 0 }}
           </div>
         </div>
-        <div class="flex items-center px-[15px] pb-[24px] text-[14px] text-[#333] font-[400]">
+        <div class="flex items-center px-[15px] pb-[24px] text-[14px] text-[--g-text-color] font-[400]">
           <div class="flex items-center">
             <el-icon class="text-[28px]" color="var(--g-ui-primary)">
               <svg-icon name="workbench-schedule" />
@@ -200,7 +200,7 @@
           </div>
         </div>
       </div>
-      <div class="mb-[10px] rounded-[8px] bg-[#fff]">
+      <div class="mb-[10px] rounded-[8px] bg-[--g-container-bg]">
         <div class="wrap-bock-title">
           系统排名
         </div>
@@ -483,8 +483,8 @@ onMounted(() => {
       margin-right: 10px;
       text-align: center;
       cursor: pointer;
-      background: #f9f9f9;
-      border: 1px solid #f2f2f2;
+      background: var(--g-border-color);
+      border: 1px solid var(--g-border-color);
       border-radius: 8px;
 
       &:last-child {
@@ -492,7 +492,7 @@ onMounted(() => {
       }
 
       &:hover {
-        background: #f5f5f5;
+        background: var(--g-header-menu-hover-bg);
       }
 
       .user-manage-name {
@@ -504,7 +504,7 @@ onMounted(() => {
       .user-manage-num {
         font-size: 32px;
         font-weight: bold;
-        color: #333;
+        color: var(--g-text-color);
       }
     }
   }
@@ -518,7 +518,7 @@ onMounted(() => {
       padding: 15px;
       margin-right: 10px;
       cursor: pointer;
-      background: #f9f9f9;
+      background: var(--g-border-color);
       border-radius: 8px;
 
       &:last-child {
@@ -533,13 +533,13 @@ onMounted(() => {
         margin-bottom: 10px;
         font-size: 14px;
         font-weight: 400;
-        color: #6f737f;
+        color: var(--g-text-color-light-3);
       }
 
       .todo-item-num {
         font-size: 32px;
         font-weight: bold;
-        color: #333;
+        color: var(--g-text-color);
       }
 
       .todo-item-icon {
@@ -575,9 +575,9 @@ onMounted(() => {
         height: 24px;
         font-size: 13px;
         line-height: 24px;
-        color: #333;
+        color: var(--g-text-color);
         text-align: center;
-        background: #f5faff;
+        background: var(--g-header-menu-hover-bg);
         border: 1px solid #dbeafe;
         border-radius: 24px;
 

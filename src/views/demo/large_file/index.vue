@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-#fff p-36px">
+  <div class="bg-[--g-container-bg] p-36px">
     <input type="file" name="" @change="handleFileChange">
     <hr>
     <el-button @click="handleUpload">
