@@ -1,0 +1,1 @@
+import{d as e,o,c as t}from"./@vue-pvvZVrFb.js";import{_ as s}from"./_plugin-vue_export-helper-DlAUqK2U.js";const c={class:"components-select"},n=e({name:"ComponentsSelect",__name:"components-select",setup(_){return(a,p)=>(o(),t("div",c," 选择 "))}}),d=s(n,[["__scopeId","data-v-f20dbd29"]]);export{d as default};

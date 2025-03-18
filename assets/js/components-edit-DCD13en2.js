@@ -1,0 +1,1 @@
+import{d as e,o,c as t}from"./@vue-pvvZVrFb.js";import{_ as n}from"./_plugin-vue_export-helper-DlAUqK2U.js";const s={class:"components-edit"},c=e({name:"ComponentsSelect",__name:"components-edit",setup(_){return(a,p)=>(o(),t("div",s," 编辑 "))}}),d=n(c,[["__scopeId","data-v-b914cb50"]]);export{d as default};
