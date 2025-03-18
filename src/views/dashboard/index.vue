@@ -163,7 +163,7 @@
         </div>
         <div class="mb-[15px] mt-[10px] flex items-center px-[15px] text-[14px] text-[#333] font-[400]">
           <div class="flex flex-1 items-center">
-            <el-icon class="text-[28px]">
+            <el-icon class="text-[28px] !color-[var(--g-ui-primary)]">
               <svg-icon name="workbench-server-user" />
             </el-icon>
             <span class="ml-[10px]">服务用户数</span>
@@ -174,7 +174,7 @@
         </div>
         <div class="flex items-center px-[15px] pb-[24px] text-[14px] text-[#333] font-[400]">
           <div class="flex items-center">
-            <el-icon class="text-[28px]">
+            <el-icon class="text-[28px] !color-[var(--g-ui-primary)]">
               <svg-icon name="workbench-schedule" />
             </el-icon>
             <span class="ml-[10px]">日程</span>
@@ -208,7 +208,7 @@
           <div class="flex items-center p-[15px] pl-0 text-[16px] font-[550]">
             <span class="title-left-line" />
             <span>用户热度排行</span>
-            <el-icon v-if="userPlanList?.length" class="ml-[12px] cursor-pointer text-[16px]" @click="handleSortChange">
+            <el-icon v-if="userPlanList?.length" class="ml-[12px] cursor-pointer text-[16px] !color-[var(--g-ui-primary)]" @click="handleSortChange">
               <svg-icon v-if="sortUp" name="workbench-sort-up" />
               <svg-icon v-else name="workbench-sort-down" />
             </el-icon>
@@ -470,7 +470,7 @@ onMounted(() => {
     width: 4px;
     height: 24px;
     margin-right: 11px;
-    background: #2d68f4;
+    background: var(--g-ui-primary);
     border-radius: 4px;
   }
 
@@ -583,7 +583,7 @@ onMounted(() => {
 
         &.top-sort {
           color: #fff;
-          background: #2d68f4;
+          background: var(--g-ui-primary);
           border: none;
         }
       }
@@ -647,9 +647,9 @@ onMounted(() => {
 
     .is-today {
       .el-calendar-day {
-        color: #2d68f4;
+        color: var(--g-ui-primary);
         background: #fff;
-        border: 1px solid #2d68f4;
+        border: 1px solid var(--g-ui-primary);
       }
     }
 
@@ -658,7 +658,7 @@ onMounted(() => {
 
       .el-calendar-day {
         color: #fff;
-        background: #2d68f4;
+        background: var(--g-ui-primary);
       }
     }
 
@@ -681,7 +681,7 @@ onMounted(() => {
 
       &:hover {
         color: #fff;
-        background: #2d68f4;
+        background: var(--g-ui-primary);
       }
     }
   }
