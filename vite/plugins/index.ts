@@ -4,6 +4,8 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 import vueLegacy from '@vitejs/plugin-legacy'
 
 import createAutoImport from './auto-import'
+import createVueMcp from './vue-mcp'
+
 import createDevtools from './devtools'
 import createConsole from './console'
 import createLayouts from './layouts'
@@ -36,5 +38,7 @@ export default function createVitePlugins(viteEnv, isBuild = false) {
   vitePlugins.push(...createCompression(viteEnv, isBuild))
   vitePlugins.push(createVisualizer() as any)
   vitePlugins.push(mock(viteEnv, isBuild))
+  vitePlugins.push(createVueMcp(viteEnv, isBuild))
+
   return vitePlugins
 }

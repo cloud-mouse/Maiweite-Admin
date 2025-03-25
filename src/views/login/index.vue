@@ -1,8 +1,8 @@
 <template>
   <div class="login-container">
     <div class="bg-banner" :style="{ backgroundImage: `url(${loginBg})` }">
-      <img class="login-banner" :src="loginBanner" alt="">
-    </div>
+      <!-- <img class="login-banner" :src="loginBanner" alt=""> -->
+    </div>z
     <div id="login-box">
       <ElForm v-show="formType === 'login'" ref="loginFormRef" :model="loginForm" :rules="loginRules" class="login-form">
         <div class="title-container">
@@ -326,9 +326,9 @@ function handleReset() {
 
     .bg-banner {
       position: fixed;
-      display: block;
       inset: 0;
       z-index: 0;
+      display: block;
       width: 100%;
       height: 100%;
       background-size: cover;
@@ -343,20 +343,19 @@ function handleReset() {
     }
 
     #login-box {
-
       position: absolute;
       top: 50%;
-      right: 120px;
+      left: 50%;
       display: flex;
       justify-content: space-between;
       overflow: hidden;
+      background-color: rgb(255 255 255 / 40%);
+      backdrop-filter: blur(6px);
       // background-color: var(--g-container-bg);
       // box-shadow: var(--el-box-shadow);
       border-radius: 10px;
-      transform: translateY(-50%);
-      background-color: rgba(255, 255, 255, 0.5);
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(10px);
+      box-shadow: 0 0 10px rgb(0 0 0 / 50%);
+      transform: translate(-50%, -50%);
 
       .login-form {
         display: flex;
