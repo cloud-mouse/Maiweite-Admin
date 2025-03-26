@@ -113,7 +113,6 @@ const columns = reactive<ColumnProps[]>(
     { prop: 'operation', label: '操作', fixed: 'right', width: 200 },
   ],
 )
-
 const drawerRef = ref()
 function handelOpenDrawer(type: string, row?: any) {
   const params = {
