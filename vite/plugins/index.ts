@@ -29,7 +29,7 @@ export default function createVitePlugins(viteEnv, isBuild = false) {
     }),
   ]
   vitePlugins.push(createDevtools(viteEnv))
-  vitePlugins.push(createConsole())
+  vitePlugins.push(createConsole(isBuild))
   vitePlugins.push(createAutoImport())
   vitePlugins.push(createComponents())
   vitePlugins.push(createSvgIcon(isBuild))
